@@ -9,7 +9,7 @@ function BusinessList() {
 
     for (let i = 0; i < times; i++) {
         businessList.push(
-            <li key={i}>{Business()}</li> 
+            <li key={i}> <Business /> </li> 
         );   
     };
 
