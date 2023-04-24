@@ -13,6 +13,7 @@ function Business() {
         rating: 4.5,
         reviewCount: 90 
     }
+    
     return (
         <div>
             <img src={business.imageSrc} />
@@ -27,3 +28,5 @@ function Business() {
         </div>
     )
 }
+
+export default Business;
