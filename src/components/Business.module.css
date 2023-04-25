@@ -1,6 +1,6 @@
 .business-card {
   height: 500px;
-  width: 400px;
+  grid-column-end: span 1;
   display: grid;
   overflow: hidden;
   grid-template-rows: 4fr 3fr;
