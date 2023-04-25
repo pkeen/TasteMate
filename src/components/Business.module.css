@@ -1,0 +1,43 @@
+.business-card {
+  height: 500px;
+  width: 400px;
+  display: grid;
+  overflow: hidden;
+  grid-template-rows: 4fr 3fr;
+  border: 1px solid black;
+}
+
+.img-container {
+  grid-row: 1 / 2;
+  height: 100%;
+  overflow: hidden;
+  /*background-image: url("https://content.codecademy.com/programs/react/ravenous/pizza.jpg"); */
+  background-size: cover;
+  background-position: 0%;
+  background-repeat: no-repeat;
+}
+
+.info-container {
+  display: grid;
+  grid-template-rows: 2fr, 2fr, 2fr;
+}
+
+.info-container .main-info, .ratings, .address {
+  grid-row: span 1;
+}
+
+span {
+  font-size: 1.5rem;
+}
+
+.flex-center {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
