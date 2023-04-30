@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography } from '@mui/material';
 
-function Logo () {
+function Title () {
     return (
         <>
             <Typography 
@@ -20,4 +20,4 @@ function Logo () {
     )
 }
 
-export default Logo;
+export default Title;
