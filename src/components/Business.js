@@ -1,6 +1,8 @@
 import React from 'react';
 import StarRating from './StarRating';
 import style from "./Business.module.css";
+import { Card } from '@mui/material';
+
 
 
 function Business() {
@@ -18,7 +20,7 @@ function Business() {
     }
 
     return (
-        <div className={style["business-card"]}>
+        <Card className={style["business-card"]}>
             
             <div
                 class={style["img-container"]}
@@ -51,7 +53,7 @@ function Business() {
 
             </div>
             
-        </div>
+        </Card>
     )
 }
 
