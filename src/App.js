@@ -3,9 +3,11 @@ import './App.css';
 import React from 'react';
 import BusinessList from './components/BusinessList';
 import SearchBar from './components/SearchBar';
-import Logo from './components/logo';
+import Title from './components/Title';
+import Header from './components/Header';
 import { ThemeProvider, createTheme  } from '@mui/material';
 import { green, orange } from '@mui/material/colors';
+import { CssBaseline } from '@mui/material';
 
 const theme = createTheme({
   palette: {
@@ -19,8 +21,8 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <Logo />
-        <SearchBar />
+        <CssBaseline />
+        <Header />
         <BusinessList />
       </ThemeProvider>
     </div>
