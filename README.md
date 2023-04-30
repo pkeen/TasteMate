@@ -1,6 +1,11 @@
-# Ravenous - A restaurant finder app using Yelp API
+# TasteMate - A restaurant finder app using Yelp API
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Tools Used
+* React
+* Material UI
+* Yelp Fusion API
 
 ## Available Scripts
 
