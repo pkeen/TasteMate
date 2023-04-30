@@ -1,7 +1,40 @@
 import React from 'react';
+import { TextField } from '@mui/material';
+import {Input} from '@mui/material';
+import Button from '@mui/material/Button';
+
+
 
 function SearchBar() {
 
+    return (
+        <form>  
+            <TextField 
+                type="text"
+                autoFocus="true"
+                label="Search"
+                name="search"
+                variant="filled">
+            </TextField>
+
+            <TextField
+                type="text"
+                name="term"
+                label="Location"
+                variant="filled">
+            </TextField>
+            <Button
+                type="submit"
+                variant="contained"
+                size="large"
+                >
+                Search
+            </Button>
+        </form>
+        
+    )
+
+    /* Regular HTML Form - might be helpful later for API debugging
     return (
         <form method="GET">
             <div id='sort_by'>
@@ -47,6 +80,7 @@ function SearchBar() {
             <input type='submit' value="Let's go!"></input>
         </form>
     )
+    */
 }
 
 export default SearchBar;
