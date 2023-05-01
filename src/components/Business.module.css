@@ -37,6 +37,10 @@ span {
   align-items: center;
 }
 
+.star-rating {
+  display: flex;
+}
+
 * {
   padding: 0;
   margin: 0;

@@ -1,7 +1,7 @@
 import React from 'react';
 import StarRating from './StarRating';
 import style from "./Business.module.css";
-import { Card } from '@mui/material';
+import { Card, Typography } from '@mui/material';
 
 
 
@@ -43,8 +43,10 @@ function Business() {
                         <StarRating 
                             rating={business.rating}
                         />
+                        <Typography color="primary" sx={{marginLeft: 1}}>
+                            {`(${business.reviewCount})`}
+                        </Typography>
                     </div>
-                    <p>Total reviews: {business.reviewCount}</p>
                 </div>
                 <div className={`${style["address"]} ${style["flex-center"]}`}>
                     <p>{business.address}, {business.city}</p>
