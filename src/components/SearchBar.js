@@ -3,47 +3,60 @@ import { TextField } from '@mui/material';
 import Button from '@mui/material/Button';
 import { Grid } from '@mui/material';
 import style from "./SearchBar.module.css";
+import {styled} from '@mui/system'
 
-
-
-const heightStyle = {
-    style: {
-        height: 100
+const SearchBarTextField = styled(TextField, {
+    name: "SearchBarTextField",
+})({
+    width: '100%',
+    "& .MuiInputBase-root": {
+        height: '100%'
     }
-}
+})
 
-const styles = theme => ({
-    input: {
-      height: 40
-    },
-    button: {
-      height: 40
-    },
-    selectRoot: {
-      height: 40,
-      display: "table"
-      // display: "flex",
-      // justifyContent: "center",
-      // alignItems: "center",
-    },
-    select: {
-      height: 40,
-      paddingTop: 0,
-      paddingBottom: 0,
-      display: "table-cell",
-      verticalAlign: "middle"
-    }
-  });
+
 
 function SearchBar() {
 
+    return (
+        <form className={style.grid}>
+            <SearchBarTextField
+                name="search"
+                label="search">
+
+            </SearchBarTextField>
+
+            <SearchBarTextField
+                name="location"
+                label="location">
+
+            </SearchBarTextField>
+            <div>
+            <Button     
+                variant="contained"
+                type="submit"
+                sx={{
+                    height: '100%',
+                    width: '100%'
+                }}
+                >
+                Search
+            </Button>
+
+            </div>
+        </form>
+    )
+
+     
+    /*
 
     return (
         <form>
 
-            <Grid container>
+            <Grid container columnSpacing={2}>
 
-                <Grid xs={12} md={4}>
+                <Grid xs={12} md={4} item >
+                    <div>
                     <TextField 
                         className={style.inputField}
                         InputLabelProps={{
@@ -54,46 +67,45 @@ function SearchBar() {
                         label="Search"
                         name="search"
                         variant="filled"
-                        fullWidth>
+                        >
                     </TextField>
+                    </div>
+                    
                 </Grid>
 
-                <Grid xs={12} md={4}>
-                    <TextField
-                        className={style.inputField}
-                        InputLabelProps={{
-                            shrink: true
-                          }}
-                        fullWidth
-                        type="text"
-                        name="term"
-                        label="Location"
-                        variant="filled">
-                    </TextField>
+                <Grid item xs={12} md={4}>
+                    <SearchBarTextField
+                        name="location"
+                        label="location">
+
+                    </SearchBarTextField>
+                    
                 </Grid>
                         
                 <Grid xs={12} md={4}>
-                    <Button
-                        className={style.inputField}
-                        fullWidth
-                        type="submit"
-                        variant="contained"
-                        size="large"
-                        >
-                        Search
-                    </Button>
+
+                        <Button
+
+                            type="submit"
+                            variant="contained"
+                            sx={{
+                                height: '100%',
+
+                            }}
+                            >
+                            Search
+                        </Button>
+
+                    
                 </Grid>
                     
               
             </Grid>
-            
-
-            
-
-            
-        </form>
         
+        </form>
     )
+    */
+
 
     /* Regular HTML Form - might be helpful later for API debugging
     return (

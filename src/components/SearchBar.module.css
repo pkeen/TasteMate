@@ -1,3 +1,21 @@
 .inputField {
-    height: 100%
+    
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 3rem;
+    grid-gap: 1rem;
+    height: auto;
+    /*overflow: hidden; */
+}
+
+@media only screen and (min-width: 700px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 4rem;
+    }
 }

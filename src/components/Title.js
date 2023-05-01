@@ -7,6 +7,9 @@ function Title () {
             <Typography 
                 variant="h1"
                 color="primary"
+                sx={{
+                    overflow: 'hidden'
+                }}
             >
                 TasteMate
             </Typography>
