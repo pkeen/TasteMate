@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextField } from '@mui/material';
+import { ButtonGroup, TextField, ToggleButton, ToggleButtonGroup } from '@mui/material';
 import Button from '@mui/material/Button';
 import { Grid } from '@mui/material';
 import style from "./SearchBar.module.css";
@@ -12,6 +12,12 @@ const SearchBarTextField = styled(TextField, {
     "& .MuiInputBase-root": {
         height: '100%'
     }
+})
+
+const StyledButtonGroup = styled(ButtonGroup)({
+    '& .MuiButtonGroup-grouped': {
+        color: "green",
+      },
 })
 
 
@@ -31,7 +37,7 @@ function SearchBar() {
                 label="location">
 
             </SearchBarTextField>
-            <div>
+          
             <Button     
                 variant="contained"
                 type="submit"
@@ -43,7 +49,25 @@ function SearchBar() {
                 Search
             </Button>
 
-            </div>
+            <ButtonGroup
+                className={`${style["button-group"]}`}
+                variant="text" 
+                exclusive
+                fullWidth>
+                <ToggleButton value="best-match" style={{oulineColor: 'red', outlineWidth: '2px'}}>
+                    Best Match
+                </ToggleButton>
+                <ToggleButton>
+                    Highest Rated
+                </ToggleButton>
+                <ToggleButton>
+                    Most Reviewed
+                </ToggleButton>
+            </ButtonGroup>
+               
+                
+
+                
         </form>
     )
 
