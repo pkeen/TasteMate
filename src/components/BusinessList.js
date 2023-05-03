@@ -6,7 +6,7 @@ const BusinessUl = styled.ul`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 500px;
-    grid-gap: 4rem 50px;
+    grid-gap: 3rem;
 
     @media only screen and (max-width: 1250px) {
         grid-template-columns: 1fr 1fr 1fr;
@@ -26,18 +26,11 @@ const BusinessLi = styled.li`
     display: inline;
 `
 
-function BusinessList() {
-
-    const businessList = [];
-
-    const times = 6;
-
-    for (let i = 0; i < times; i++) {
-        businessList.push(
-            <BusinessLi key={i}> <Business /> </BusinessLi> 
-        );   
-    };
-
+function BusinessList(props) {
+    
+    const businessList = props.businessArray.map((business, index) => {
+        return <BusinessLi key={index}> <Business business={business}/> </BusinessLi> 
+    })
 
     return (
         <BusinessUl>

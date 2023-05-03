@@ -8,6 +8,7 @@ import { green, orange } from '@mui/material/colors';
 import { CssBaseline } from '@mui/material';
 import {Container} from '@mui/material';
 
+/* THEME */
 const theme = createTheme({
   palette: {
     mode: 'dark',
@@ -34,6 +35,25 @@ theme.typography.h1 = {
       fontSize: '3.2rem',
     },
 }
+/* THEME */
+
+/* DATA */
+const businessInfo = {
+  imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
+  name: 'MarginOtto Pizzeria',
+  address: '1010 Paddington Way',
+  city: 'Flavortown',
+  state: 'NY',
+  zipCode: '10101',
+  category: 'Italian',
+  rating: 4.5,
+  reviewCount: 90 
+}
+
+const businessArray = [...Array(6)].map( (x) => {
+  return businessInfo;
+});
+/* DATA */
 
 function App() {
   return (
@@ -41,7 +61,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Header />
-        <BusinessList />
+        <BusinessList businessArray={businessArray}/>
       </ThemeProvider>
     </Container>
 

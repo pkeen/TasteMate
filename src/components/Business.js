@@ -5,25 +5,13 @@ import { Card, Typography } from '@mui/material';
 
 
 
-function Business() {
-
-    const business = {
-        imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
-        name: 'MarginOtto Pizzeria',
-        address: '1010 Paddington Way',
-        city: 'Flavortown',
-        state: 'NY',
-        zipCode: '10101',
-        category: 'Italian',
-        rating: 4.5,
-        reviewCount: 90 
-    }
+function Business({business}) {
 
     return (
         <Card className={style["business-card"]}>
             
             <div
-                class={style["img-container"]}
+                className={style["img-container"]}
                 style={{
                     backgroundImage: `url(${business.imageSrc || "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png"})`
                 }}
