@@ -4,6 +4,9 @@ import Button from '@mui/material/Button';
 import { Grid } from '@mui/material';
 import style from "./SearchBar.module.css";
 import {styled} from '@mui/system'
+import { borders } from '@mui/system';
+import ToggleSelect from './ToggleSelect/ToggleSelect';
+
 
 const SearchBarTextField = styled(TextField, {
     name: "SearchBarTextField",
@@ -11,13 +14,15 @@ const SearchBarTextField = styled(TextField, {
     width: '100%',
     "& .MuiInputBase-root": {
         height: '100%'
-    }
+    },
+    gridColumn: 'span 1'
 })
 
 const StyledButtonGroup = styled(ButtonGroup)({
     '& .MuiButtonGroup-grouped': {
         color: "green",
-      },
+    },
+    gridColumn: 'span 1'
 })
 
 
@@ -49,25 +54,16 @@ function SearchBar() {
                 Search
             </Button>
 
-            <ButtonGroup
-                className={`${style["button-group"]}`}
-                variant="text" 
-                exclusive
-                fullWidth>
-                <ToggleButton value="best-match" style={{oulineColor: 'red', outlineWidth: '2px'}}>
-                    Best Match
-                </ToggleButton>
-                <ToggleButton>
-                    Highest Rated
-                </ToggleButton>
-                <ToggleButton>
-                    Most Reviewed
-                </ToggleButton>
-            </ButtonGroup>
-               
-                
-
-                
+            <ToggleSelect 
+                sx={{
+                    gridColumn: {
+                        xs: 1,
+                        sm: 2
+                    }
+                }} 
+            >
+            </ToggleSelect>
+                   
         </form>
     )
 

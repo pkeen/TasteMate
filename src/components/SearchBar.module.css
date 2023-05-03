@@ -20,12 +20,3 @@
         grid-auto-rows: 2rem;
     }
 }
-
-/* Toggle Button Group */
-@media only screen and (min-width: 700px){
-    .button-group {
-        grid-column-start: 2;
-        grid-gap: 0;
-        
-    }
-}
