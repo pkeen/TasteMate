@@ -2,8 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import BusinessList from './components/BusinessList';
-import SearchBar from './components/SearchBar';
-import Title from './components/Title';
 import Header from './components/Header';
 import { ThemeProvider, createTheme  } from '@mui/material';
 import { green, orange } from '@mui/material/colors';
@@ -16,6 +14,15 @@ const theme = createTheme({
     primary: orange,
     secondary: green,
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 700,
+      md: 1103,
+      lg: 1300,
+      xl: 1600
+    }
+  }
 })
 
 theme.typography.h1 = {
