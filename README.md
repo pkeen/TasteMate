@@ -1,11 +1,21 @@
 # TasteMate - A restaurant finder app using Yelp API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Outline
+A restarant rating and reviews app using Yelp Fusion API. Search for restaurants in your local area. 
 
 ## Tools Used
 * React
 * Material UI
 * Yelp Fusion API
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Features
+* Location based - search
+
+## Future Work
+* Add google map API to restaurants
+* Allow users to add reviews
 
 ## Available Scripts
 
