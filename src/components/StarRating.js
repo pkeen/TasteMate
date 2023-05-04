@@ -13,13 +13,13 @@ const StarRating = ({rating}) => {
         index += 1;
         if (ratingInteger >= 1) {
             ratingInteger -= 1;
-            return <StarIcon color="primary"/>
+            return <StarIcon key ={index} color="primary"/>
         } else {
             if (ratingDecimal > 0.01) {
                 ratingDecimal = 0;
-                return <StarHalfIcon color="primary"/>
+                return <StarHalfIcon key={index} color="primary"/>
             } else {
-                return <StarBorderOutlinedIcon />
+                return <StarBorderOutlinedIcon key={index} />
             }
         }
     });   
