@@ -1,10 +1,8 @@
 import React from 'react';
-import { ButtonGroup, TextField, ToggleButton, ToggleButtonGroup } from '@mui/material';
+import { TextField } from '@mui/material';
 import Button from '@mui/material/Button';
-import { Grid } from '@mui/material';
 import style from "./SearchBar.module.css";
 import {styled} from '@mui/system'
-import { borders } from '@mui/system';
 import ToggleSelect from './ToggleSelect/ToggleSelect';
 
 
@@ -14,13 +12,6 @@ const SearchBarTextField = styled(TextField, {
     width: '100%',
     "& .MuiInputBase-root": {
         height: '100%'
-    },
-    gridColumn: 'span 1'
-})
-
-const StyledButtonGroup = styled(ButtonGroup)({
-    '& .MuiButtonGroup-grouped': {
-        color: "green",
     },
     gridColumn: 'span 1'
 })
