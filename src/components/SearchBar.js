@@ -22,7 +22,7 @@ function SearchBar() {
 
     const [searchTermState, setSearchTermState] = useState(null)
     const [locationState, setLocationState] = useState(null)
-    const [filterState, setFilterState] = useState(null)
+    const [sortState, setSortState] = useState(null)
 
     function updateSearchTerm(e) {
         const value = e.target.value
@@ -34,20 +34,20 @@ function SearchBar() {
         setLocationState(value);
     }
 
-    const handleFilterState = e => {
-        const filterValue = e.target.value
-        filterValue === filterState ? setFilterState(null) : setFilterState(filterValue)
+    const handleSortState = e => {
+        const sortValue = e.target.value
+        sortValue === sortState ? setSortState(null) : setSortState(sortValue)
     }
 
     const handleButtonClick = () => {
-        console.log(`Searching Yelp with ${searchTermState}, ${locationState} and ${filterState} sorting`)
+        console.log(`Searching Yelp with ${searchTermState}, ${locationState} and ${sortState} sorting`)
     }
 
-    /* Logs
+    
     console.log(searchTermState)
     console.log(`Location: ${locationState}`)
-    console.log(filterState)
-    */
+    console.log(sortState)
+    
 
     return (
         <form className={style.grid}>
@@ -78,8 +78,8 @@ function SearchBar() {
             </Button>
 
             <ToggleSelect 
-                filterState={filterState}
-                handleFilterState={handleFilterState}
+                sortState={sortState}
+                handleSortState={handleSortState}
                 sx={{
                     gridColumn: {
                         xs: 1,

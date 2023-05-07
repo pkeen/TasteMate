@@ -7,7 +7,7 @@ import { Grid } from '@mui/material';
 
 function Header() {
     return (
-        <Grid container css={{marginBottom: '1rem'}}>
+        <Grid container css={{marginBottom: '3rem'}}>
             
             <Grid item xs={12}>
                 <Title></Title>
