@@ -39,6 +39,10 @@ function SearchBar() {
         filterValue === filterState ? setFilterState(null) : setFilterState(filterValue)
     }
 
+    const handleButtonClick = () => {
+        console.log(`Searching Yelp with ${searchTermState}, ${locationState} and ${filterState} sorting`)
+    }
+
     /* Logs
     console.log(searchTermState)
     console.log(`Location: ${locationState}`)
@@ -68,6 +72,7 @@ function SearchBar() {
                     height: '100%',
                     width: '100%'
                 }}
+                onClick={handleButtonClick}
                 >
                 Search
             </Button>
@@ -82,7 +87,6 @@ function SearchBar() {
                     },
                     marginBottom: '2rem'
                 }}
-                //onChange={updateFilterState} 
             >
             </ToggleSelect>
                    
