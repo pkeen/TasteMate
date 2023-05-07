@@ -1,5 +1,5 @@
-import React from 'react';
-import { TextField } from '@mui/material';
+import React, { useState } from 'react';
+import { TextField, ToggleButtonGroup, ToggleButton } from '@mui/material';
 import Button from '@mui/material/Button';
 import style from "./SearchBar.module.css";
 import {styled} from '@mui/system'
@@ -20,17 +20,44 @@ const SearchBarTextField = styled(TextField, {
 
 function SearchBar() {
 
+    const [searchTermState, setSearchTermState] = useState(null)
+    const [locationState, setLocationState] = useState(null)
+    const [filterState, setFilterState] = useState(null)
+
+    function updateSearchTerm(e) {
+        const value = e.target.value
+        setSearchTermState(value);
+    }
+
+    function updateLocationState(e) {
+        const value = e.target.value;
+        setLocationState(value);
+    }
+
+    const handleFilterState = e => {
+        const filterValue = e.target.value
+        filterValue === filterState ? setFilterState(null) : setFilterState(filterValue)
+    }
+
+    /* Logs
+    console.log(searchTermState)
+    console.log(`Location: ${locationState}`)
+    console.log(filterState)
+    */
+
     return (
         <form className={style.grid}>
             <SearchBarTextField
                 name="search"
-                label="search">
+                label="search"
+                onChange={updateSearchTerm}>
 
             </SearchBarTextField>
 
             <SearchBarTextField
                 name="location"
-                label="location">
+                label="location"
+                onChange={updateLocationState}>
 
             </SearchBarTextField>
           
@@ -46,12 +73,16 @@ function SearchBar() {
             </Button>
 
             <ToggleSelect 
+                filterState={filterState}
+                handleFilterState={handleFilterState}
                 sx={{
                     gridColumn: {
                         xs: 1,
                         sm: 2
-                    }
-                }} 
+                    },
+                    marginBottom: '2rem'
+                }}
+                //onChange={updateFilterState} 
             >
             </ToggleSelect>
                    
